@@ -1,0 +1,40 @@
+/* ============================================================
+   UBCab — Fonts
+     • Calibri — self-hosted brand corporate font → UI + body text
+     • Nunito  — rounded display / marketing headlines (CDN)
+     • Roboto Mono — fares, codes, tracking IDs (CDN, tabular)
+   All carry Cyrillic (Mongolian) + Latin coverage.
+   ⚠ Nunito is a substitute for the marketing display face —
+     swap for the licensed UBCab display font when available.
+   ============================================================ */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600;700;800;900&family=Roboto+Mono:wght@400;500;600&display=swap');
+
+/* ---- Calibri (brand) — self-hosted ---- */
+@font-face {
+  font-family: 'Calibri';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/calibri-regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Calibri';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/calibri-italic.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Calibri';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/calibri-bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Calibri';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/calibri-bold-italic.ttf') format('truetype');
+}

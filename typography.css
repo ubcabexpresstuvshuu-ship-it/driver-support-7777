@@ -1,0 +1,53 @@
+/* ============================================================
+   UBCab — Typography tokens
+   Display = Nunito (rounded, punchy). UI/body = Manrope.
+   Mono = Roboto Mono for fares / codes / tracking IDs.
+   ============================================================ */
+:root {
+  /* Families */
+  --font-display: 'Nunito', 'Segoe UI', system-ui, sans-serif;
+  --font-sans:    'Calibri', 'Segoe UI', system-ui, sans-serif;
+  --font-mono:    'Roboto Mono', ui-monospace, 'SF Mono', monospace;
+
+  /* Weights */
+  --fw-regular: 400;    /* @kind font */
+  --fw-medium:  500;    /* @kind font */
+  --fw-semibold: 600;   /* @kind font */
+  --fw-bold:    700;    /* @kind font */
+  --fw-extrabold: 800;  /* @kind font */
+  --fw-black:   900;    /* @kind font */
+
+  /* Type scale (px) — UI/web baseline */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-md:   18px;
+  --text-lg:   20px;
+  --text-xl:   24px;
+  --text-2xl:  30px;
+  --text-3xl:  38px;
+  --text-4xl:  48px;
+  --text-5xl:  62px;
+  --text-6xl:  80px;
+
+  /* Line heights */
+  --leading-tight:   1.08;
+  --leading-snug:    1.2;
+  --leading-normal:  1.45;
+  --leading-relaxed: 1.6;
+
+  /* Letter spacing */
+  --tracking-tight:  -0.02em;
+  --tracking-normal: 0;
+  --tracking-wide:   0.04em;
+  --tracking-caps:   0.08em;
+
+  /* Semantic roles */
+  --display-family: var(--font-display);
+  --display-weight: var(--fw-black);
+  --heading-family: var(--font-display);
+  --heading-weight: var(--fw-extrabold);
+  --body-family:    var(--font-sans);
+  --body-weight:    var(--fw-regular);
+  --label-weight:   var(--fw-bold);
+}

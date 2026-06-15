@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="mn">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>UBCAB Express — Апп</title>
+<style>
+  @font-face { font-family:'URW Geometric'; font-weight:300; font-display:swap; src:url('fonts/URWGeometricLight.otf') format('opentype'); }
+  @font-face { font-family:'URW Geometric'; font-weight:400; font-display:swap; src:url('fonts/URWGeometricRegular.otf') format('opentype'); }
+  @font-face { font-family:'URW Geometric'; font-weight:500; font-display:swap; src:url('fonts/URWGeometricMedium.otf') format('opentype'); }
+  @font-face { font-family:'URW Geometric'; font-weight:600; font-display:swap; src:url('fonts/URWGeometricSemiBold.otf') format('opentype'); }
+  @font-face { font-family:'URW Geometric'; font-weight:700; font-display:swap; src:url('fonts/URWGeometricBold.otf') format('opentype'); }
+  @font-face { font-family:'URW Geometric'; font-weight:800; font-display:swap; src:url('fonts/URWGeometricExtraBold.otf') format('opentype'); }
+
+  :root {
+    --ub-font: 'Montserrat', -apple-system, system-ui, sans-serif;
+    --ub-ease: cubic-bezier(.2,0,0,1);
+    --ub-orange: #F58220;
+    --ub-zoom: 1;
+  }
+  /* Light (default) */
+  .ub-theme {
+    --ub-bg:#F4F1EA; --ub-surface:#FFFFFF; --ub-surface-2:#F3EFE7; --ub-chip:#EEE9E0;
+    --ub-ink:#1A1714; --ub-ink-2:#5E574D; --ub-ink-3:#938B7E; --ub-border:rgba(0,0,0,.09);
+    --ub-orange-d: color-mix(in srgb, var(--ub-orange) 82%, #000);
+    --ub-orange-t: color-mix(in srgb, var(--ub-orange) 13%, transparent);
+    --ub-green:#1C8A5B; --ub-green-t: color-mix(in srgb, #1C8A5B 13%, transparent);
+    --ub-info:#3A6B7A;  --ub-info-t: color-mix(in srgb, #3A6B7A 13%, transparent);
+    --ub-map:#ECE7DC; --ub-map-line:rgba(0,0,0,.05); --ub-map-road:#DBD3C3;
+  }
+  .ub-theme[data-dark="true"] {
+    --ub-bg:#141210; --ub-surface:#1F1B17; --ub-surface-2:#1A1713; --ub-chip:#2A251F;
+    --ub-ink:#F5F1EA; --ub-ink-2:#B6AFA3; --ub-ink-3:#847C70; --ub-border:rgba(255,255,255,.10);
+    --ub-orange-d: color-mix(in srgb, var(--ub-orange) 65%, #fff);
+    --ub-orange-t: color-mix(in srgb, var(--ub-orange) 22%, transparent);
+    --ub-green:#3FB37F; --ub-green-t: color-mix(in srgb, #3FB37F 18%, transparent);
+    --ub-info:#74AABA;  --ub-info-t: color-mix(in srgb, #74AABA 18%, transparent);
+    --ub-map:#221E19; --ub-map-line:rgba(255,255,255,.045); --ub-map-road:#2F2A23;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin:0; height:100%; }
+  body {
+    font-family: var(--ub-font); background:#100D0A;
+    -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+    overflow: hidden;
+  }
+  .ub-btn:hover { filter: brightness(.97); }
+  .ub-btn:active { transform: scale(.98); }
+  .ub-card { transition: box-shadow .15s var(--ub-ease), transform .15s var(--ub-ease); }
+  .ub-card:hover { box-shadow: 0 8px 24px rgba(0,0,0,.08); }
+  .ub-zoom { zoom: var(--ub-zoom); width: calc(100% / var(--ub-zoom)); height: calc(100% / var(--ub-zoom)); }
+  ::-webkit-scrollbar { width:10px; height:10px; }
+  ::-webkit-scrollbar-thumb { background: rgba(128,120,108,.4); border-radius:999px; border:3px solid transparent; background-clip: content-box; }
+  ::-webkit-scrollbar-track { background: transparent; }
+</style>
+</head>
+<body>
+<div id="root"></div>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+<script type="text/babel" src="frames/ios-frame.jsx"></script>
+<script type="text/babel" src="frames/browser-window.jsx"></script>
+<script type="text/babel" src="frames/tweaks-panel.jsx"></script>
+<script type="text/babel" src="ub-data.jsx"></script>
+<script type="text/babel" src="ub-ui.jsx"></script>
+<script type="text/babel" src="driver-app.jsx"></script>
+<script type="text/babel" src="admin-app.jsx"></script>
+<script type="text/babel" src="cs-web.jsx"></script>
+<script type="text/babel" src="ub-root.jsx"></script>
+<script src="supabase-sync.js"></script>
+</body>
+</html>

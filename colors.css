@@ -1,0 +1,93 @@
+/* ============================================================
+   UBCab — Color tokens
+   Sampled from official UBCab Express brand assets.
+   Primary orange #F78320 is the anchor of the whole system.
+   ============================================================ */
+:root {
+  /* ---- Brand: Orange (primary) ---- */
+  --orange-50:  #FFF4EC;
+  --orange-100: #FEE6D2;
+  --orange-200: #FCCBA0;
+  --orange-300: #FBAE6C;
+  --orange-400: #F99746;
+  --orange-500: #F78320;   /* core brand orange */
+  --orange-600: #E2710F;
+  --orange-700: #BD5C0B;
+  --orange-800: #91470B;
+  --orange-900: #6E370A;
+
+  /* ---- Brand: Gold/Yellow (accent — route line, highlights) ---- */
+  --gold-300: #FFD972;
+  --gold-400: #FFC83D;
+  --gold-500: #FDB714;   /* accent gold */
+  --gold-600: #E09E00;
+
+  /* ---- Neutrals (warm-tinted ink → cool grays) ---- */
+  --ink-900: #141414;   /* headings / near-black */
+  --ink-800: #1F2024;
+  --ink-700: #33353B;
+  --gray-600: #5B5E66;
+  --gray-500: #8A8D94;   /* secondary / subtitle text */
+  --gray-400: #ADB0B6;
+  --gray-300: #D4D6DB;
+  --gray-200: #E6E7EA;
+  --gray-100: #F0F1F3;
+  --gray-50:  #F6F7F8;
+  --surface-gray: #F3F3F3;  /* sampled marketing background */
+  --white: #FFFFFF;
+
+  /* ---- Semantic status ---- */
+  --green-500:  #1F8A5B;   /* success / on-trip / food */
+  --green-50:   #E7F4EE;
+  --red-500:    #E5484D;   /* error / cancel */
+  --red-50:     #FCEBEB;
+  --blue-500:   #2A6FDB;   /* info / links */
+  --blue-50:    #EAF1FC;
+  --amber-500:  #F5A623;   /* warning */
+  --amber-50:   #FEF3E0;
+
+  /* ================= Semantic aliases ================= */
+  /* Brand */
+  --brand:            var(--orange-500);
+  --brand-hover:      var(--orange-600);
+  --brand-active:     var(--orange-700);
+  --brand-subtle:     var(--orange-50);
+  --brand-on:         var(--white);
+  --accent:           var(--gold-500);
+
+  /* Text */
+  --text-primary:     var(--ink-900);
+  --text-secondary:   var(--gray-500);
+  --text-tertiary:    var(--gray-400);
+  --text-on-brand:    var(--white);
+  --text-link:        var(--orange-600);
+  --text-disabled:    var(--gray-400);
+
+  /* Surfaces */
+  --surface-page:     var(--surface-gray);
+  --surface-card:     var(--white);
+  --surface-raised:   var(--white);
+  --surface-sunken:   var(--gray-100);
+  --surface-inverse:  var(--ink-900);
+
+  /* Borders */
+  --border-subtle:    var(--gray-200);
+  --border-default:   var(--gray-300);
+  --border-strong:    var(--gray-400);
+  --border-brand:     var(--orange-500);
+
+  /* Status */
+  --success:          var(--green-500);
+  --success-subtle:   var(--green-50);
+  --danger:           var(--red-500);
+  --danger-subtle:    var(--red-50);
+  --info:             var(--blue-500);
+  --info-subtle:      var(--blue-50);
+  --warning:          var(--amber-500);
+  --warning-subtle:   var(--amber-50);
+
+  /* Map / live (mobility product) */
+  --map-route:        var(--orange-500);
+  --map-pickup:       var(--ink-900);
+  --map-dropoff:      var(--gold-500);
+}

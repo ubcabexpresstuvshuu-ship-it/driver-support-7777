@@ -1,0 +1,42 @@
+/* ============================================================
+   UBCab — Spacing & layout tokens
+   4px base grid.
+   ============================================================ */
+:root {
+  --space-0:  0;
+  --space-1:  4px;
+  --space-2:  8px;
+  --space-3:  12px;
+  --space-4:  16px;
+  --space-5:  20px;
+  --space-6:  24px;
+  --space-7:  32px;
+  --space-8:  40px;
+  --space-9:  48px;
+  --space-10: 64px;
+  --space-11: 80px;
+  --space-12: 96px;
+  --space-13: 128px;
+
+  /* Component paddings */
+  --pad-control: 12px 20px;   /* buttons / inputs */
+  --pad-card:    20px;
+  --pad-section: 64px;
+
+  /* Containers */
+  --container-sm:  640px;
+  --container-md:  960px;
+  --container-lg:  1200px;
+  --container-xl:  1320px;
+
+  /* Mobile app frame */
+  --app-width:  390px;
+  --app-gutter: 16px;
+
+  /* Z-index */
+  --z-base:    1;     /* @kind other */
+  --z-sticky:  100;   /* @kind other */
+  --z-overlay: 1000;  /* @kind other */
+  --z-modal:   1100;  /* @kind other */
+  --z-toast:   1200;  /* @kind other */
+}

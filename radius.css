@@ -1,0 +1,39 @@
+/* ============================================================
+   UBCab — Radius & elevation tokens
+   The brand leans on soft, rounded shapes (squircle app icon,
+   pill CTAs, rounded cards). Shadows are soft and warm-neutral.
+   ============================================================ */
+:root {
+  /* Corner radii */
+  --radius-xs:   6px;
+  --radius-sm:   10px;
+  --radius-md:   14px;
+  --radius-lg:   20px;
+  --radius-xl:   28px;
+  --radius-2xl:  36px;
+  --radius-pill: 999px;
+  --radius-card: var(--radius-lg);
+  --radius-control: var(--radius-pill);  /* buttons are pills */
+  --radius-input: var(--radius-md);
+
+  /* Elevation — soft, low-contrast, neutral */
+  --shadow-xs:  0 1px 2px rgba(20, 20, 20, 0.06);
+  --shadow-sm:  0 2px 6px rgba(20, 20, 20, 0.07);
+  --shadow-md:  0 6px 16px rgba(20, 20, 20, 0.09);
+  --shadow-lg:  0 14px 32px rgba(20, 20, 20, 0.12);
+  --shadow-xl:  0 24px 56px rgba(20, 20, 20, 0.16);
+  --shadow-sheet: 0 -8px 28px rgba(20, 20, 20, 0.14); /* bottom sheets */
+
+  /* Brand glow — for primary CTAs / live elements */
+  --shadow-brand: 0 8px 22px rgba(247, 131, 32, 0.32);
+
+  /* Focus ring */
+  --focus-ring: 0 0 0 3px rgba(247, 131, 32, 0.30);
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);    /* @kind other */
+  --ease-emphasis: cubic-bezier(0.3, 0, 0, 1.1);  /* @kind other */
+  --dur-fast:   120ms;  /* @kind other */
+  --dur-base:   200ms;  /* @kind other */
+  --dur-slow:   320ms;  /* @kind other */
+}
