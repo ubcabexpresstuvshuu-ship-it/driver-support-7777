@@ -340,6 +340,10 @@ function ModeSwitch({ mode, setMode }) {
     </div>);
 }
 
+// Tweaks fallback (production — no tweaks-panel.jsx)
+function useTweaks(defaults) { return [defaults, () => {}]; }
+function TweaksPanel() { return null; }
+
 function Root() {
   const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
   const [mode, setMode] = useRS(() => localStorage.getItem('ub_mode') || 'driver');
